@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.teamopendata.mindcareapp.R;
+import com.teamopendata.mindcareapp.common.model.entity.Task;
 import com.teamopendata.mindcareapp.databinding.FragmentHomeBinding;
-import com.teamopendata.mindcareapp.ui.home.model.TaskDTO;
 
 import java.util.ArrayList;
 
@@ -32,11 +32,11 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // dummy data
-        ArrayList<TaskDTO> dummyTasks = new ArrayList<>();
-        dummyTasks.add(new TaskDTO("오늘 병원 가기"));
-        dummyTasks.add(new TaskDTO("1시간 명상 하기"));
-        dummyTasks.add(new TaskDTO("즐거운 생각 하기"));
-        dummyTasks.add(new TaskDTO("길게 적으면 글자가 짤려요@@@@@@@@@@@@"));
+        ArrayList<Task> dummyTasks = new ArrayList<>();
+        dummyTasks.add(new Task("오늘 병원 가기"));
+        dummyTasks.add(new Task("1시간 명상 하기"));
+        dummyTasks.add(new Task("즐거운 생각 하기"));
+        dummyTasks.add(new Task("길게 적으면 글자가 짤려요@@@@@@@@@@@@"));
 
         ArrayList<String> dummyKeywords = new ArrayList<>();
         dummyKeywords.add("불면");

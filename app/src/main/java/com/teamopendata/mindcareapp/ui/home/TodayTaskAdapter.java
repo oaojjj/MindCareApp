@@ -9,15 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.teamopendata.mindcareapp.R;
-import com.teamopendata.mindcareapp.ui.home.model.TaskDTO;
+import com.teamopendata.mindcareapp.common.model.entity.Task;
 
 import java.util.List;
 
 public class TodayTaskAdapter extends RecyclerView.Adapter<TodayTaskAdapter.ViewHolder> {
 
-    private final List<TaskDTO> mTasks;
+    private final List<Task> mTasks;
 
-    public TodayTaskAdapter(List<TaskDTO> taskList) {
+    public TodayTaskAdapter(List<Task> taskList) {
         mTasks = taskList;
     }
 
@@ -47,7 +47,7 @@ public class TodayTaskAdapter extends RecyclerView.Adapter<TodayTaskAdapter.View
             checkBox = itemView.findViewById(R.id.cb_today_task);
         }
 
-        public void bind(TaskDTO task) {
+        public void bind(Task task) {
             checkBox.setChecked(task.isCompleted());
             checkBox.setText(task.getContents());
         }

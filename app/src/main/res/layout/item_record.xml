@@ -1,75 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="8dp"
-    android:background="@drawable/border_round_rectangle_light"
-    android:orientation="horizontal"
-    android:padding="3dp">
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="8dp">
 
-    <RelativeLayout
-        android:id="@+id/rl_container_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fill_round_rectangle_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
 
-        <TextView
-            android:id="@+id/tv_record_day_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:includeFontPadding="false"
-            android:minWidth="32dp"
-            android:text="14"
-            android:textColor="@color/home_light"
-            android:textSize="24sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_record_day_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_record_day_number"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:includeFontPadding="false"
-            android:text="Tue"
-            android:textColor="@android:color/black"
-            android:textSize="10sp" />
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_container_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fill_round_rectangle_light">
 
-    <TextView
-        android:id="@+id/tv_record_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="노원구정신거낭복지센터 처방"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/rl_container_date"
-        app:layout_constraintEnd_toStartOf="@+id/btn_record_edit"
-        app:layout_constraintStart_toEndOf="@+id/rl_container_date"
-        app:layout_constraintTop_toTopOf="@+id/rl_container_date" />
+                <TextView
+                    android:id="@+id/tv_record_day_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="32dp"
+                    android:text="14"
+                    android:textColor="@color/home_light"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_record_day_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_record_day_number"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="4dp"
+                    android:includeFontPadding="false"
+                    android:text="Tue"
+                    android:textColor="@color/records_dark"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_record_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="노원구정신거낭복지센터 처방"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_record_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/icon_edit_24" />
 
 
-    <ImageButton
-        android:id="@+id/btn_record_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/icon_edit_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

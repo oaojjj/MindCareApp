@@ -24,7 +24,7 @@
     <color name="buttonDefaultcolor">#0920A1</color>
 
     <!-- home colors-->
-    <color name="default_background">#FBFEFD</color>
+    <color name="default_background">#ffffff</color>
     <color name="home_dark">#0D47A1</color>
     <color name="home_light">#90CAF9</color>
     <color name="white">#FFFFFF</color>

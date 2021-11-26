@@ -4,22 +4,26 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/cb_task"
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_completed_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/records_light"
-        android:buttonTint="@color/task_color"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_check_box"
+        android:button="@null"
         android:checked="true"
-        android:minWidth="0dp" />
+        android:minWidth="24dp"
+        android:minHeight="24dp" />
 
     <EditText
         android:id="@+id/et_contents_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="@color/records_dark"
+        android:background="@null"
         android:hint="@string/hint_task"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        android:paddingStart="8dp" />
 
 </LinearLayout>
